@@ -16,3 +16,13 @@ Technologies Utilisées :
 - Ethers.js pour l'interaction front-end avec les contrats Ethereum.
 - HTML/CSS pour la structure et le style de l'interface utilisateur.
 - Bootstrap pour le design responsive.
+
+Installation : 
+
+Installez les dépendances : npm install
+
+Configuration : 
+Assurez-vous de configurer correctement votre environnement : Mettez à jour le fichier .env avec les informations pertinentes. Assurez-vous que MetaMask est installé et configuré sur votre navigateur.
+
+Utilisation : 
+Pour démarrer l'application, ouvrez le fichier index.html dans votre navigateur.
