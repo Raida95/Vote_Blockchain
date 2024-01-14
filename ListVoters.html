@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Application de Vote Décentralisé</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="main.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.7.1.umd.min.js" type="application/javascript"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/index.html">Vote Décentralisé</a>
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/ListVoters.html">Liste des Électeurs</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="text-center">Bienvenue sur l'Application de Vote Décentralisé</h1>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary" onclick="connectMetamask()">Connecter Metamask</button>
+            <p id="metamasknotification"></p>
+        </div>
+
+        <div class="mt-4">
+            <h2>Ajoutez un candidat ici</h2>
+            <form method="POST" action="/vote" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" name="vote" class="form-control" placeholder="Entrez le nom du candidat...">
+                </div>
+                <button type="submit" class="btn btn-success">Ajouter un Candidat</button>
+            </form>
+        </div>
+
+        <div class="mt-4">
+            <button class="btn btn-info" onclick="getAllCandidates()">Lister Tous les Candidats</button>
+            <p id="p3" class="mt-3"></p>
+        </div>
+
+        <div class="mt-4">
+            <table id="myTable" class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Index</th>
+                        <th>Nom du Candidat</th>
+                        <th>Voix du Candidat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Les candidats seront listés ici -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
